@@ -82,8 +82,11 @@ abbr iferr if err != nil {<CR>
 abbr consts const (<CR>
 
 
+"  Tagbar configuration
+nmap <F8> :TagbarToggle<CR>
 
-
-
+"  NerdTree configuration
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 
