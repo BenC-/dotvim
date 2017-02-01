@@ -60,7 +60,7 @@ let g:go_def_mapping_enabled = 1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.go set filetype=go
 autocmd BufWritePre *.go GoImports
-
+filetype plugin indent on
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
