@@ -80,10 +80,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
-
 abbr iferr if err != nil {<CR>
 abbr consts const (<CR>
-
 
 "  Tagbar configuration
 nmap <F8> :TagbarToggle<CR>
@@ -92,9 +90,25 @@ nmap <F8> :TagbarToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-
 "  Go to next windows (Alt+Arrow)
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+"  typescript-vim configuration
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+"  vim-js-pretty-template configuration
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+
+
+
+
+
+
+
