@@ -1,3 +1,3 @@
 # dotvim
-Vim configuration files.
+My vim configuration files.
 Used with pathogen.
